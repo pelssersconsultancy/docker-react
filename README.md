@@ -10,8 +10,6 @@ docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app ebb2674147902243e049
 
 docker run -it ebb2674147902243e0492ed156a114395551a4c235c629fb5f38021e30389dd2 npm run test
 
-# Attach to running container
-
-docker attach <container_id>
-
-docker attach
+docker-compose -f docker-compose-dev.yml up
+docker-compose -f docker-compose-dev.yml up --build
+docker-compose -f docker-compose-dev.yml down
