@@ -11,5 +11,7 @@ RUN npm run build
 
 # Run phase
 FROM nginx
+# Expose is used for elastic beanstalk to map port
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # no need for CMD as nginx image has default command to start nginx
